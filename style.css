@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro";
+}
+
+*:focus {
+    outline: none !important;
+}
+
+body,html {
+    height: 100vh;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background: linear-gradient(to right,#c6ffdd,#fbd786,#f7797d);
+}
+
+.calculator {
+    display: flex;
+    flex-flow: column;
+    box-shadow: 0 0 10px rgba(86, 85, 85, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.2);
+}
+
+.calculator button {
+    display: block;
+    border: 0;
+    width: 64px;
+    height: 64px;
+    background: none;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+}
+
+.calculator button:active,
+.calculator button.active {
+    transition: all 100ms ease-in;
+}
+
+.calculator .screen {
+    margin-bottom: 15px;
+}
+
+.calculator .equation {
+    width: 100%;
+    padding: 6px;
+    border-radius: 15px;
+    background-color: #fff;
+    color: #333;
+    overflow: hidden;
+}
+.calculator .equation .summary,
+.calculator .equation .total {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.calculator .equation .summary {
+    padding: 6px 6px 0;
+    height: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #b3b3b3;
+}
+
+.calculator .equation .total {
+    padding: 3px 6px 6px;
+    font-size: 32px;
+}
+
+.calculator .buttons {
+    display: flex;
+}
+
+.calculator .numbers {
+    width: 194px;
+}
+
+.calculator .numbers ul {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.calculator .numbers button {
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+    background: rgba(255,255,255,0.7);
+}
+
+.calculator .numbers button:hover,
+.calculator .numbers button:focus {
+    background: rgba(255,255,255,0.45);
+}
+
+.calculator .numbers button:active,
+.calculator .numbers button.active {
+    background: rgba(255,255,255,0.05);
+}
+
+.calculator .numbers li {
+    border-bottom: 1px #ccc solid;
+    border-left: 1px #ccc solid;
+}
+
+.calculator .numbers li.zero,
+.calculator .numbers li:last-child {
+    border-bottom: 0;
+}
+
+.calculator .numbers li:nth-child(2),
+.calculator .numbers li:nth-child(5),
+.calculator .numbers li:nth-child(8),
+.calculator .numbers li.zero,
+.calculator .numbers li.clear {
+    border-left: 0;
+}
+
+.calculator .numbers .clear {
+    width: 100%;
+}
+
+.calculator .numbers .clear button {
+    border-top-left-radius: 15px;
+    width: 100%;
+    background: rgba(255,255,255,0.35);
+}
+
+.calculator .numbers .clear button:hover,
+.calculator .numbers .clear button:focus {
+    background: rgba(255,255,255,0.55);
+}
+
+.calculator .numbers .clear button:active,
+.calculator .numbers .clear button.active {
+    background: rgba(255,255,255,0.05);
+}
+
+.calculator .numbers .zero {
+    width: 129px;
+}
+.calculator .numbers .zero button {
+    width: 100%;
+    border-bottom-left-radius: 15px;
+}
+
+.calculator .operators {
+    width: 65px;
+    border-left: 1px #ccc solid;
+}
+
+.calculator .operators ul {
+    background: linear-gradient(to bottom,#f953c6 0%,#b91d73 100%);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.calculator .operators button {
+    font-size: 36px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.calculator .operators button:hover,
+.calculator .operators button:focus {
+    background: rgba(255,255,255,0.25);
+}
+
+.calculator .operators button:active,
+.calculator .operators button.active {
+    background: rgba(224,123,0,0.25);
+}
+
+.calculator .operators li:not(:last-child) {
+    border-bottom: 1px #ff77ff solid;
+}
+
+.brand {
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
